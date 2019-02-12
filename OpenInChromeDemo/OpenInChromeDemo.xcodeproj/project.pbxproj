@@ -11,6 +11,9 @@
 		1A1C5BB62212C6CF00DAC851 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A1C5BB42212C6CF00DAC851 /* Main.storyboard */; };
 		1A1C5BB82212C6D100DAC851 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A1C5BB72212C6D100DAC851 /* Assets.xcassets */; };
 		1A1C5BBB2212C6D100DAC851 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A1C5BB92212C6D100DAC851 /* LaunchScreen.storyboard */; };
+		1A6F66E42212C7950037EB6E /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6F66E32212C7950037EB6E /* DemoViewController.swift */; };
+		1A6F66E92212C8010037EB6E /* UIViewController+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6F66E82212C8010037EB6E /* UIViewController+XT.swift */; };
+		1AE389642212DB6D009CB9DF /* OpenInChromeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE389632212DB6D009CB9DF /* OpenInChromeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,9 @@
 		1A1C5BB72212C6D100DAC851 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A1C5BBA2212C6D100DAC851 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A1C5BBC2212C6D100DAC851 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A6F66E32212C7950037EB6E /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
+		1A6F66E82212C8010037EB6E /* UIViewController+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+XT.swift"; sourceTree = "<group>"; };
+		1AE389632212DB6D009CB9DF /* OpenInChromeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenInChromeController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +42,7 @@
 		1A1C5BA42212C6CF00DAC851 = {
 			isa = PBXGroup;
 			children = (
+				1AE389632212DB6D009CB9DF /* OpenInChromeController.swift */,
 				1A1C5BAF2212C6CF00DAC851 /* OpenInChromeDemo */,
 				1A1C5BAE2212C6CF00DAC851 /* Products */,
 			);
@@ -54,7 +61,7 @@
 			children = (
 				1A1C5BB02212C6CF00DAC851 /* AppDelegate.swift */,
 				1A1C5BC22212C6E100DAC851 /* Configurations */,
-				1A1C5BC32212C6E800DAC851 /* Controllers */,
+				1A6F66E52212C7C40037EB6E /* Source */,
 				1A1C5BC52212C70200DAC851 /* Storyboards */,
 				1A1C5BC42212C6F000DAC851 /* Resources */,
 			);
@@ -67,13 +74,6 @@
 				1A1C5BBC2212C6D100DAC851 /* Info.plist */,
 			);
 			path = Configurations;
-			sourceTree = "<group>";
-		};
-		1A1C5BC32212C6E800DAC851 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		1A1C5BC42212C6F000DAC851 /* Resources */ = {
@@ -93,6 +93,31 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		1A6F66E22212C7800037EB6E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1A6F66E32212C7950037EB6E /* DemoViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1A6F66E52212C7C40037EB6E /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				1A6F66E22212C7800037EB6E /* Controllers */,
+				1A6F66E62212C7CB0037EB6E /* Extensions */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		1A6F66E62212C7CB0037EB6E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1A6F66E82212C8010037EB6E /* UIViewController+XT.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,6 +128,7 @@
 				1A1C5BA92212C6CF00DAC851 /* Sources */,
 				1A1C5BAA2212C6CF00DAC851 /* Frameworks */,
 				1A1C5BAB2212C6CF00DAC851 /* Resources */,
+				1AE389652212DB90009CB9DF /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -159,12 +185,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1AE389652212DB90009CB9DF /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1A1C5BA92212C6CF00DAC851 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1A1C5BB12212C6CF00DAC851 /* AppDelegate.swift in Sources */,
+				1A6F66E92212C8010037EB6E /* UIViewController+XT.swift in Sources */,
+				1AE389642212DB6D009CB9DF /* OpenInChromeController.swift in Sources */,
+				1A6F66E42212C7950037EB6E /* DemoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,8 +361,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4G2RGXSV53;
+				DEVELOPMENT_TEAM = 2ZQNENV2H9;
 				INFOPLIST_FILE = "$(SRCROOT)/OpenInChromeDemo/Configurations/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -329,8 +380,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4G2RGXSV53;
+				DEVELOPMENT_TEAM = 2ZQNENV2H9;
 				INFOPLIST_FILE = "$(SRCROOT)/OpenInChromeDemo/Configurations/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
